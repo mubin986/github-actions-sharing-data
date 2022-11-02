@@ -1,11 +1,10 @@
-name: CI/CD Test
+name: Cache Example
 
 on:
   push:
     branches: [main]
 
 
-name: Cache Example
 
 jobs:
   cache-build:

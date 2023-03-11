@@ -16,8 +16,10 @@ jobs:
       - name: Linux import credentials
         run: |
           export ENV_1=${{ secrets.ENV_1 }}
+          echo "::set-env ENV_2=CR_PAT::GITHUB_CONTAINER_REGISTRY_PAT"
       - name: Print credentials
         run: |
           echo $ENV_1
+          echo $ENV_2
           echo $ENV_MULTILINE
 

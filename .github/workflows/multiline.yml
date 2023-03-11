@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
-      
+
     steps:
       # - name: Import credentials
       #   run: |
@@ -19,7 +19,7 @@ jobs:
       - name: Linux import credentials
         run: |
           export ENV_1=${{ secrets.ENV_1 }}
-          echo "::set-env ENV_2=CR_PAT::GITHUB_CONTAINER_REGISTRY_PAT"
+          echo "::set-env name=ENV_2::GITHUB_CONTAINER_REGISTRY_PAT"
       - name: Print credentials
         run: |
           echo $ENV_1

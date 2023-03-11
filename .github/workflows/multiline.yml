@@ -9,10 +9,13 @@ jobs:
     name: Multiline github env test
     runs-on: ubuntu-latest
     steps:
-      - name: Import credentials
+      # - name: Import credentials
+      #   run: |
+      #     echo "ENV_1=${{ secrets.ENV_1 }}" >> $GITHUB_ENV
+      #     # echo "ENV_MULTILINE=${{ secrets.ENV_MULTILINE }}" >> $GITHUB_ENV
+      - name: Linux import credentials
         run: |
-          echo "ENV_1=${{ secrets.ENV_1 }}" >> $GITHUB_ENV
-          # echo "ENV_MULTILINE=${{ secrets.ENV_MULTILINE }}" >> $GITHUB_ENV
+          export ENV_1=${{ secrets.ENV_1 }}
       - name: Print credentials
         run: |
           echo $ENV_1

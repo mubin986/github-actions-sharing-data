@@ -1,0 +1,20 @@
+name: Share data between jobs
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  multiline-env:
+    name: Add 3 and 7
+    runs-on: ubuntu-latest
+    steps:
+      - name: Import credentials
+        run: |
+          echo "ENV_1=${{ secrets.ENV_1 }}" >> $GITHUB_ENV
+          echo "ENV_MULTILINE=${{ secrets.ENV_MULTILINE }}" >> $GITHUB_ENV
+      - name: Print credentials
+        run: |
+          echo $ENV_1
+          echo $ENV_MULTILINE
+

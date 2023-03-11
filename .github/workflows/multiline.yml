@@ -6,13 +6,13 @@ on:
 
 jobs:
   multiline-env:
-    name: Add 3 and 7
+    name: Multiline github env test
     runs-on: ubuntu-latest
     steps:
       - name: Import credentials
         run: |
           echo "ENV_1=${{ secrets.ENV_1 }}" >> $GITHUB_ENV
-          echo "ENV_MULTILINE=${{ secrets.ENV_MULTILINE }}" >> $GITHUB_ENV
+          # echo "ENV_MULTILINE=${{ secrets.ENV_MULTILINE }}" >> $GITHUB_ENV
       - name: Print credentials
         run: |
           echo $ENV_1

@@ -1,0 +1,40 @@
+
+name: Tag
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version to create (e.g. 1.2.0). Must match with tag name. Don't include v"
+        required: true
+        type: string
+
+permissions: write-all
+
+env:
+  APP_VERSION: v${{github.event.inputs.version}}
+
+jobs:
+  generate:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [windows-latest]
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: "${{ env.APP_VERSION }}"
+          
+      - name: Checkout to release tag
+        run: |
+          git checkout v${{env.APP_VERSION}}
+
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.x
+      - run: |
+          echo "github.ref: ${{github.ref}}"
+          

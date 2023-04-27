@@ -37,4 +37,16 @@ jobs:
           node-version: 16.x
       - run: |
           echo "github.ref: ${{github.ref}}"
+
+      - name: Build
+        run: echo ${{ github.sha }} > Release.txt
+      - name: Test
+        run: cat Release.txt
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: Release.txt
+          tag_name: ${{env.APP_VERSION}}
+          name: ${{env.APP_VERSION}}
+
           

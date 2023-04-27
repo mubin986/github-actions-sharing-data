@@ -1,3 +1,12 @@
+## [0.3.1](https://github.com/mubin986/github-actions-sharing-data/compare/v0.3.0...v0.3.1) (2023-04-27)
+
+
+### Bug Fixes
+
+* hello ([17fc33c](https://github.com/mubin986/github-actions-sharing-data/commit/17fc33c58ad71bf1ec1363a19f7cd330a0308917))
+
+
+
 # [0.3.0](https://github.com/mubin986/github-actions-sharing-data/compare/v0.2.0...v0.3.0) (2023-04-27)
 
 

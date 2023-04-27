@@ -1,4 +1,13 @@
-# 0.2.0 (2023-04-27)
+# [0.3.0](https://github.com/mubin986/github-actions-sharing-data/compare/v0.2.0...v0.3.0) (2023-04-27)
+
+
+### Features
+
+* tag ci cd ([4b9b192](https://github.com/mubin986/github-actions-sharing-data/commit/4b9b192b2e4f004a7ac3bea84a2656f0969916a8))
+
+
+
+# [0.2.0](https://github.com/mubin986/github-actions-sharing-data/compare/4ef0504dc800176706c44955dbf8f61ddf6f14ff...v0.2.0) (2023-04-27)
 
 
 ### Features

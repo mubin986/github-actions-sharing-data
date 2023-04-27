@@ -1,3 +1,12 @@
+## [0.3.2](https://github.com/mubin986/github-actions-sharing-data/compare/v0.3.1...v0.3.2) (2023-04-27)
+
+
+### Bug Fixes
+
+* tag push ([fc7630b](https://github.com/mubin986/github-actions-sharing-data/commit/fc7630b18e4715d56d41806fbe018e2b5d53f45b))
+
+
+
 ## [0.3.1](https://github.com/mubin986/github-actions-sharing-data/compare/v0.3.0...v0.3.1) (2023-04-27)
 
 

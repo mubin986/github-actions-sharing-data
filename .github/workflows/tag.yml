@@ -29,7 +29,7 @@ jobs:
           
       - name: Checkout to release tag
         run: |
-          git checkout v${{env.APP_VERSION}}
+          git checkout ${{env.APP_VERSION}}
 
       - name: Use Node.js 16.x
         uses: actions/setup-node@v1
